@@ -4,8 +4,8 @@ pipeline {
         maven 'maven3'
     }
     environment {
-        imageName = "bg-sl" // camel casing
-        user_name = kannan65629 // snake casing
+        imageName = 'bg-sl' // camel casing
+        user_name = 'kannan65629'// snake casing
         ScannerName = tool 'sonarscanner'  // pascal casing 
     }
     stages {
