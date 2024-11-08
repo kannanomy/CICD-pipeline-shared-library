@@ -27,7 +27,7 @@ pipeline {
         stage ('static codeanalysis') {
             steps {
                 withSonarQubeEnv ('sonarserver') {
-                    sh''' $scanner/bin/sonar-scanner \
+                    sh''' $scanner/bin/sonarscanner \
                     -Dsonar.projectName=bg-sl \
                     -Dsonar.projectKey=bg-slkey
                     -Dsonar.java.binaries=target/classes
