@@ -6,7 +6,7 @@ pipeline {
     environment {
         imageName = 'bg-sl' // camel casing
         user_name = 'kannan65629'// snake casing
-        ScannerName = tool 'sonarscanner'  // pascal casing 
+        scannerName = tool 'sonarscanner'  
     }
     stages {
         // stage ('cleanup workspace') {
@@ -27,7 +27,7 @@ pipeline {
         stage ('static codeanalysis') {
             steps {
                 withSonarQubeEnv ('sonarserver') {
-                    sh''' $ScannerName/bin/sonar-scanner \
+                    sh''' $scannerName/bin/sonar-scanner \
                     -Dsonar.projectName=bg-sl \
                     -Dsonar.projectKey=bg-slkey
                     -Dsonar.java.binaries=target/classes
