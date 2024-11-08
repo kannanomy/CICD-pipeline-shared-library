@@ -5,8 +5,8 @@ pipeline {
     }
     environment {
         imageName = bg-sl // camel casing
-        user_name = kannan65629 //snake casing
-        ScannerName = tool 'sonarscanner'  //pascal casing 
+        user_name = kannan65629 // snake casing
+        ScannerName = tool 'sonarscanner'  // pascal casing 
     }
     stages {
         stage ('cleanup workspace') {
