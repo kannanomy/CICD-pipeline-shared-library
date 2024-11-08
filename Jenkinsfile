@@ -9,11 +9,11 @@ pipeline {
         ScannerName = tool 'sonarscanner'  // pascal casing 
     }
     stages {
-        stage ('cleanup workspace') {
-            steps {
-                cleanWs() //clean workspace function
-            }
-        }
+        // stage ('cleanup workspace') {
+        //     steps {
+        //         cleanWs() //clean workspace function
+        //     }
+        // }
         stage ('code compile') {
             steps {
                 sh 'mvn compile'
