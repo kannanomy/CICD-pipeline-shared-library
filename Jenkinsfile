@@ -14,7 +14,7 @@ pipeline {
                 cleanWs() //clean workspace function
             }
         }
-        stage ('compile') {
+        stage ('code compile') {
             steps {
                 sh 'mvn compile'
             }
